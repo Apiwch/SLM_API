@@ -25,7 +25,7 @@ app.post('/api/SLM', function (req, res) {
         timestamp: timestamp
     };
 	
-    if (data.length >= 30) {
+    if (data.length >= 100) {
         // Remove the first element from the array
         data.shift();
     }
