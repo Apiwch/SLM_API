@@ -12,6 +12,9 @@ app.use(bodyParser.json())
 
 
 let data = [];
+app.get('/', function(req, res){
+    res.json("Hello");
+});
 
 app.post('/api/SLM', function (req, res) {
 	
