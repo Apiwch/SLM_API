@@ -25,8 +25,9 @@ app.post('/api/SLM', function (req, res) {
         timestamp: timestamp
     };
 	
-if (data.length >= 30) {
-        data = [];
+    if (data.length >= 30) {
+        // Remove the first element from the array
+        data.shift();
     }
     data.push(SLRecord);
 	res.send('success : ' + req.query.SLM)
