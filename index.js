@@ -24,6 +24,10 @@ app.post('/api/SLM', function (req, res) {
         SL: SL,
         timestamp: timestamp
     };
+	
+if (data.length >= 30) {
+        data = [];
+    }
     data.push(SLRecord);
 	res.send('success : ' + req.query.SLM)
 })
